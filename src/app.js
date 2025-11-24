@@ -97,6 +97,9 @@ const html = `
     <section>
       VPS - Hello Express API V 1.3.4
     </section>
+    <section>
+      by Kaue
+    </section>
   </body>
 </html>
 `
