@@ -14,4 +14,16 @@ describe('/test endpoints', () => {
     expect(data.statusCode).toBe(200);
     expect(data.text).toBe('Yo!');
   });
+
+  it('check if endpoint /vps returns `Servidor VPS Funcionando... OK`', async () => {
+    const data = await request(app).get('/vps');
+    expect(data.statusCode).toBe(200);
+    expect(data.body.message).toBe('Servidor VPS Funcionando... OK');
+  });
+
+  it('check if endpoint /test returns `Servidor Funcionando.......`', async () => {
+    const data = await request(app).get('/test');
+    expect(data.statusCode).toBe(200);
+    expect(data.body.message).toBe('Servidor Funcionando.......');
+  });
 });
